@@ -1,0 +1,56 @@
+:root {
+    --light: #EAE7DC;
+    --light-middle: #D8C3A5;
+    --middle: #8E8D8A;
+    --light-red: #E98074;
+    --dark-red: #E85A4F;
+}
+
+
+
+.font_Quicksan {
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+
+.font_raleway {
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.font_Header {
+    font-size: 30px;
+}
+
+.font_paragraph {
+    font-size: 15px;
+}
+
+body {
+    background: var(--light);
+
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid black;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    
+}
+
+.menuItem{
+    width: 100px;
+    margin: 5px;
+    padding: 5 px;
+    color: var(--dark-red);
+}
