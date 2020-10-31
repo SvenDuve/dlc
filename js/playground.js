@@ -1,8 +1,3 @@
-const thing = document.createElement("div")
-thing.innerHTML = "hello people we are here"
-document.getElementById('check').appendChild(thing)
-
-
 const checkpoint = 300;
  
 window.addEventListener("scroll", () => {
@@ -12,6 +7,6 @@ window.addEventListener("scroll", () => {
    } else {
      opacity = 0;
    }
-   document.querySelector(".contentGreeting").style.opacity = opacity;
-});
-
+   document.querySelector(".front").style.opacity = opacity;
+ });
+ 
