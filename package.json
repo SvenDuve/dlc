@@ -1,0 +1,40 @@
+{
+  "name": "dlc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SvenDuve/dlc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SvenDuve/dlc/issues"
+  },
+  "homepage": "https://github.com/SvenDuve/dlc#readme",
+  "dependencies": {
+    "node": "^15.0.1",
+    "save-dev": "0.0.1-security"
+  },
+  "devDependencies": {
+    "css-loader": "^5.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "lodash": "^4.17.20",
+    "sass": "^1.28.0",
+    "sass-loader": "^10.0.5",
+    "scss": "^0.2.4",
+    "scss-loader": "0.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.3.2",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
