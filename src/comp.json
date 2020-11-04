@@ -1,0 +1,9 @@
+{
+    "activityFields":[
+        {"acr":"wRecht", "text":"Wirtschaftsrecht"}, 
+        {"acr":"hRecht", "text":"Nationales und internationales Handelsrecht"}, 
+        {"acr":"bRecht", "text":"Bankenrecht"},
+        {"acr":"gRecht", "text":"Gesellschaftsrecht"},
+        {"acr":"mRecht", "text":"Mietrecht"}
+    ] 
+}
