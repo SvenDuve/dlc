@@ -5,5 +5,11 @@
         {"acr":"bRecht", "text":"Bankenrecht"},
         {"acr":"gRecht", "text":"Gesellschaftsrecht"},
         {"acr":"mRecht", "text":"Mietrecht"}
-    ] 
+    ],
+    "menuItem": [
+        {"acr":"kanzleiBtn", "text":"Kanzlei"},
+        {"acr":"rechtBtn", "text":"Recht"},
+        {"acr":"methodeBtn", "text":"Methode"},
+        {"acr":"kontaktBtn", "text":"Kontakt"}
+    ]
 }

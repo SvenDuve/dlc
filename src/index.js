@@ -7,19 +7,20 @@ import simpleParallax from 'simple-parallax-js';
 // console.log(compList.activityFields)
 
 
-function menuComponent() {
-    var menuItems = ['Kanzlei', 'Recht', 'Methode', 'Kontakt'];
+function menuComponent(listOfItems, type) {
 
-    var item;
+    let name = 'menu '
 
     const menu = document.createElement('div');
-    menu.className = 'menu';
+    menu.className = name.concat(type);
 
-    for (item of menuItems) {
-        console.log(item);
-        var menuItem = document.createElement('div');
-        menuItem.className = 'menu item';
-        menuItem.innerHTML = item;
+    for (var item of listOfItems) {
+        console.log(item.acr);
+        console.log(item.text);
+        let menuItem = document.createElement('div');
+        menuItem.className = menu.className.concat('item');
+        menuItem.id = item.acr
+        menuItem.innerHTML = item.text;
         menu.appendChild(menuItem);
         // item.innerHTML = element;
         // menu.appendChild(item)
@@ -29,6 +30,8 @@ function menuComponent() {
 
 };
 
+const menuList = document.getElementById('menu');
+menuList.appendChild(menuComponent(compList.menuItem, 'main'));
 
 function createList(listOfItems, type) {
     let name = 'list'
@@ -53,9 +56,6 @@ function createList(listOfItems, type) {
 
 }
 
-// createList(compList.activityFields)
-
-// const schwerpunkt = ['Wirtschaftsrecht', 'Nationales und internationales Handelsrecht', 'Bankenrecht', 'Gesellschaftsrecht']
 
 const competenceList = document.getElementById('competenceList');
 competenceList.appendChild(createList(compList.activityFields, 'competence'));
@@ -95,6 +95,65 @@ function contentComponents() {
 // document.body.appendChild(contentComponents())
 
 
-// const wirtschaftsRecht = document.getElementsByClassName('')
+// const wRecht = document.getElementById('wRecht');
+// wRecht.addEventListener('mouseover', (e) => {
+//     const wRechtDesc = document.createElement('div');
+//     wRechtDesc.innerHTML = "I am here";
+//     wRecht.appendChild(wRechtDesc);
+// })
 
-// document.addEventListener()
+
+
+const Sections = document.getElementsByClassName('contentBox');
+// console.log(Sections);
+
+
+function getSectionIds(Sections) {
+    
+    let idSelections = []; 
+    
+    for (let i = 0; i < Sections.length; i++) {
+        idSelections.push(Sections[i].attributes.id.textContent);
+    }
+    
+    return idSelections;
+    
+};
+
+
+
+function getButtonId(Ids) {
+    let buttonIds = [];
+    for (let i = 0; i < Ids.length; i++) {
+        buttonIds.push(Ids[i].acr); 
+    }
+            
+    return buttonIds
+};
+
+console.log(compList.menuItem.length)
+
+console.log(getSectionIds(Sections));
+
+
+
+function scrollThereNow() {
+    
+    for(let i = 0; i < Sections.length; i++){
+        
+        let elmnt = document.getElementById(buttonIds[i]);
+        let targetLoc = document.getElementById(Ids[i]);
+        elmnt.addEventListener('click', function() {
+            
+            targetLoc.scrollIntoView({behavior: 'smooth'});
+            
+        });
+        
+    }
+}
+
+
+const buttonIds = getButtonId(compList.menuItem);
+const Ids = getSectionIds(Sections);
+
+scrollThereNow();
