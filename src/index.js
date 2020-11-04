@@ -46,7 +46,7 @@ function createList(listOfItems, type) {
         console.log(item.acr)
         console.log(item.text)
         var listItem = document.createElement('div');
-        listItem.className = list.className.concat(' items');
+        listItem.className = list.className.concat(' items textForm');
         listItem.id = item.acr;
         listItem.innerHTML = item.text;
         list.appendChild(listItem);
