@@ -192,3 +192,20 @@ const buttonIds = getButtonId(compList.menuItem);
 const Ids = getSectionIds(Sections);
 
 scrollThereNow();
+
+
+
+
+const checkpoint = 500;
+
+window.addEventListener("scroll", () => {
+   const currentScroll = window.pageYOffset;
+   let opacity = 1
+   if (currentScroll <= checkpoint) {
+     opacity = 1 - currentScroll / checkpoint;
+   } else {
+     opacity = 0;
+   }
+   document.querySelector(".contentGreeting").style.opacity = opacity;
+});
+
