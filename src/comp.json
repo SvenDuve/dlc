@@ -11,5 +11,12 @@
         {"acr":"rechtBtn", "text":"Recht"},
         {"acr":"methodeBtn", "text":"Methode"},
         {"acr":"kontaktBtn", "text":"Kontakt"}
+    ],
+    "activityDescriptions":[
+        {"acr":"wRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"}, 
+        {"acr":"hRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"}, 
+        {"acr":"bRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"},
+        {"acr":"gRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"},
+        {"acr":"mRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"}
     ]
 }

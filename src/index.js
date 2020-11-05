@@ -3,6 +3,7 @@ import './style.scss'
 import img from './books-768426_1920.jpg'
 import compList from './comp.json'
 import simpleParallax from 'simple-parallax-js';
+// import './compFields.js';
 
 // console.log(compList.activityFields)
 
@@ -95,12 +96,74 @@ function contentComponents() {
 // document.body.appendChild(contentComponents())
 
 
+
+function contentOnMouseEnter() {
+
+    const list = compList.activityDescriptions;
+    
+    for(let i = 0; i < list.length; i++){
+        
+        document.getElementById(list[i].acr).onmouseenter = function(event) {
+            let target = event.target;
+            const desc = document.createElement('div');
+            desc.style.opacity = 0;
+            desc.innerHTML = list[i].text;
+            target.appendChild(desc)
+            let steps = 0;
+            let timer = setInterval(function() {
+                steps++;
+                desc.style.opacity = 0.05 * steps;
+                if(steps >= 20) {
+                    clearInterval(timer);
+                    timer = undefined;
+                }
+            }, 50);
+            target.style.background = 'pink';
+        };
+
+        document.getElementById(list[i].acr).onmouseout = function(event) {
+            let target = event.target;
+            let c = target.childNodes[1];    
+            c.remove();
+            target.style.background = '';
+        };
+        
+        
+    };
+
+}
+
+
+contentOnMouseEnter();
+
 // const wRecht = document.getElementById('wRecht');
-// wRecht.addEventListener('mouseover', (e) => {
-//     const wRechtDesc = document.createElement('div');
-//     wRechtDesc.innerHTML = "I am here";
-//     wRecht.appendChild(wRechtDesc);
-// })
+
+// let's highlight an element under the pointer
+// document.getElementById('wRecht').onmouseenter = function(event) {
+//     let target = event.target;
+//     const desc = document.createElement('div');
+//     desc.style.opacity = 0;
+//     desc.innerHTML = compList.activityDescriptions[1].text;
+//     target.appendChild(desc)
+//     let steps = 0;
+//     let timer = setInterval(function() {
+//         steps++;
+//         desc.style.opacity = 0.05 * steps;
+//         if(steps >= 20) {
+//             clearInterval(timer);
+//             timer = undefined;
+//         }
+//     }, 50);
+//     target.style.background = 'pink';
+// };
+
+// document.getElementById('wRecht').onmouseout = function(event) {
+//     let target = event.target;
+//     let c = target.childNodes[1];    
+//     c.remove();
+//     target.style.background = '';
+// };
+
 
 
 
