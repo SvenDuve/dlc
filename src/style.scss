@@ -40,8 +40,9 @@ body {
   display: grid;
   grid-template-columns: 50% 50%;
   // justify-content: flex-end;
-  border: 1px solid black;
-  background-color: $dark-red;
+  // border: 1px solid black;
+  background-color: $light;
+  color: $middle;
   position: fixed;
   top: 0;
   width: 100%;
@@ -70,7 +71,7 @@ body {
   // margin: 5px;
   padding: 20px;
   font-size: $headsize;
-  background-color: $dark-red;
+  background-color: $light;
   font-family: $raleway;
   transition: {
     property: background-color;
@@ -78,7 +79,8 @@ body {
   }
 
   &:hover {
-    background-color: $light-red;
+    background-color: $light-middle;
+    color: black;
   }
 
 }
@@ -91,7 +93,7 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: minmax(700px, auto);
   justify-content: center;  /* zentriert im container entlang der achse */
-  border: 1px solid green;
+  // border: 1px solid green;
   /* display: flex;
   flex-direction: column; */
 }
@@ -107,7 +109,7 @@ body {
   height: 650px;
   margin: 100px;
   // padding: 50px;
-  border: 1px solid black;
+  // border: 1px solid black;
   opacity: 1;
   // background-color: var(--light-middle);
   /* box-shadow: 5px 5px 15px 5px rgb(112, 112, 112); */
@@ -127,7 +129,7 @@ body {
   height: 600px;
   margin: 100px;
   padding: 50px;
-  border: 1px solid black;
+  // border: 1px solid black;
   background-color: var(--light-middle);
   /* box-shadow: 5px 5px 15px 5px rgb(112, 112, 112); */
 }
@@ -137,7 +139,7 @@ body {
   display: grid;
   grid-template-columns: 50% 50%;
   // justify-content: flex-end;
-  border: 1px solid black;
+  // border: 1px solid black;
   background-color: $dark-red;
   bottom: 0;
   position: fixed;

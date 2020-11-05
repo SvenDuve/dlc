@@ -118,10 +118,11 @@ function contentOnMouseEnter() {
                     timer = undefined;
                 }
             }, 50);
-            target.style.background = 'pink';
+            target.style.background = '#D8C3A5';
+            target.style.color = '#8E8D8A'
         };
 
-        document.getElementById(list[i].acr).onmouseout = function(event) {
+        document.getElementById(list[i].acr).onmouseleave = function(event) {
             let target = event.target;
             let c = target.childNodes[1];    
             c.remove();
@@ -135,35 +136,6 @@ function contentOnMouseEnter() {
 
 
 contentOnMouseEnter();
-
-// const wRecht = document.getElementById('wRecht');
-
-// let's highlight an element under the pointer
-// document.getElementById('wRecht').onmouseenter = function(event) {
-//     let target = event.target;
-//     const desc = document.createElement('div');
-//     desc.style.opacity = 0;
-//     desc.innerHTML = compList.activityDescriptions[1].text;
-//     target.appendChild(desc)
-//     let steps = 0;
-//     let timer = setInterval(function() {
-//         steps++;
-//         desc.style.opacity = 0.05 * steps;
-//         if(steps >= 20) {
-//             clearInterval(timer);
-//             timer = undefined;
-//         }
-//     }, 50);
-//     target.style.background = 'pink';
-// };
-
-// document.getElementById('wRecht').onmouseout = function(event) {
-//     let target = event.target;
-//     let c = target.childNodes[1];    
-//     c.remove();
-//     target.style.background = '';
-// };
-
 
 
 
