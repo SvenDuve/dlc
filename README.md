@@ -1,5 +1,5 @@
 # To Do
 
-More content
-Google Analytics
-Better Design
+- More content
+- Google Analytics
+- Better Design
