@@ -3,6 +3,7 @@ import './style.scss'
 import img from './books-768426_1920.jpg'
 import compList from './comp.json'
 import simpleParallax from 'simple-parallax-js';
+
 // import './compFields.js';
 
 // console.log(compList.activityFields)
@@ -192,6 +193,33 @@ const buttonIds = getButtonId(compList.menuItem);
 const Ids = getSectionIds(Sections);
 
 scrollThereNow();
+
+function backUp() {
+    let homeDude = document.getElementById("compName");
+    let loc = document.getElementById("startImg");
+    homeDude.addEventListener('click', function() {
+        loc.scrollIntoView({behavior: 'smooth'});
+    })
+}
+
+backUp();
+
+
+// function goHome() {
+    
+//     let homeButton = document.getElementById('compName');
+//     // let targetLoc = document.getElementById(Ids[i]);
+//     homeButton.addEventListener('click', function() {
+
+//         window.location.href = "/";
+//         // targetLoc.scrollIntoView({behavior: 'smooth'});
+            
+//     });
+    
+// }
+
+
+// goHome();
 
 
 
