@@ -17,6 +17,15 @@ $paSize: 15px;
   padding: 15px;
 }
 
+
+.headingsSmall {
+  font-size: 22px;
+}
+
+.marginLeft {
+  margin-left: 25px;
+}
+
 .textForm {
   font-size: $paSize;
   font-family: $quicksan;
@@ -24,6 +33,9 @@ $paSize: 15px;
   padding: 15px;
 }
 
+.paddingBottom {
+  padding-bottom: 100px;
+}
 
 body {
   background-color: $light;
@@ -129,7 +141,7 @@ body {
   width: 80%;
   height: 600px;
   margin: 100px;
-  padding: 50px;
+  padding-top: 100px;
   // border: 1px solid black;
   // background-color: $light-middle;
   /* box-shadow: 5px 5px 15px 5px rgb(112, 112, 112); */
@@ -140,7 +152,6 @@ body {
 .footer{
   display: grid;
   grid-template-columns: 50% 50%;
-  // justify-content: flex-end;
   // border: 1px solid black;
   background-color: $dark-red;
   bottom: 0;
@@ -153,7 +164,7 @@ body {
   display: flex;
   flex-direction: row;
   align-self: flex-end;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .footer--item {
