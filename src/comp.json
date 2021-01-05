@@ -1,11 +1,13 @@
 {
     "activityFields":[
+        {"acr":"kRecht", "text":"Kauf- und Werkvertragsrecht"},
+        {"acr":"eRecht", "text":"Energierecht"}, 
+        {"acr":"vRecht", "text":"Vertragsrecht"}, 
         {"acr":"wRecht", "text":"Wirtschaftsrecht"}, 
-        {"acr":"hRecht", "text":"Nationales und internationales Handelsrecht"}, 
-        {"acr":"bRecht", "text":"Bankenrecht"},
-        {"acr":"gRecht", "text":"Gesellschaftsrecht"},
+        {"acr":"hRecht", "text":"Handels- und Gesellschaftsrecht"}, 
         {"acr":"mRecht", "text":"Mietrecht"},
-        {"acr":"sRecht", "text":"Strafrecht"}
+        {"acr":"bRecht", "text":"Bankenrecht"},
+        {"acr":"iRecht", "text":"Inkasso- und Mahnverfahren"}
     ],
     "menuItem": [
         {"acr":"kanzleiBtn", "text":"Kanzlei"},
@@ -14,12 +16,14 @@
         {"acr":"kontaktBtn", "text":"Kontakt"}
     ],
     "activityDescriptions":[
-        {"acr":"wRecht", "text":"Das Wirtschaftsrecht ist die Gesamtheit aller privatrechtlichen, strafrechtlichen und öffentlich-rechtlichen Rechtsnormen und Maßnahmen, mit denen der Staat auf die Rechtsbeziehungen der am Wirtschaftsleben Beteiligten untereinander und im Verhältnis zum Staat einwirkt, und ist der Oberbegriff für das Recht des Wirtschaftsverkehrs sowie die rechtliche Grundlage der Wirtschaftspolitik."}, 
-        {"acr":"hRecht", "text":"Das Handelsrecht ist ein Teilgebiet des Zivilrechts, das sich mit dem Recht der Kaufleute beschäftigt. In der Europäischen Union ist das Handelsrecht in großen Teilen durch Richtlinien harmonisiert. In Deutschland ist das Handelsrecht im Handelsgesetzbuch und seinen Nebengesetzen geregelt."}, 
-        {"acr":"bRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"},
-        {"acr":"gRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"},
-        {"acr":"mRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"},
-        {"acr":"sRecht", "text":"Das Strafrecht, auch als Kriminal(straf)recht bezeichnet, umfasst im Rechtssystem eines Landes diejenigen Rechtsnormen, durch die bestimmte Verhaltensweisen verboten und mit einer Strafe als Rechtsfolge verknüpft werden. Als Ziel des Strafrechts gilt vor allem der Schutz bestimmter Rechtsgüter wie beispielsweise Leben, Gesundheit und Eigentum von Personen, Sicherheit und Integrität des Staates sowie elementarer Werte des Gemeinschaftslebens. Mögliche Strafen, die jedoch nicht in allen Ländern praktiziert werden, sind unter anderem die Geldstrafe, die Freiheitsstrafe, die Körperstrafe sowie als schwerwiegendste Form die Todesstrafe."}
+        {"acr":"kRecht", "text":"Das Wirtschaftsrecht ist die Gesamtheit aller privatrechtlichen, strafrechtlichen und öffentlich-rechtlichen Rechtsnormen und Maßnahmen, mit denen der Staat auf die Rechtsbeziehungen der am Wirtschaftsleben Beteiligten untereinander und im Verhältnis zum Staat einwirkt, und ist der Oberbegriff für das Recht des Wirtschaftsverkehrs sowie die rechtliche Grundlage der Wirtschaftspolitik."}, 
+        {"acr":"eRecht", "text":"Das Handelsrecht ist ein Teilgebiet des Zivilrechts, das sich mit dem Recht der Kaufleute beschäftigt. In der Europäischen Union ist das Handelsrecht in großen Teilen durch Richtlinien harmonisiert. In Deutschland ist das Handelsrecht im Handelsgesetzbuch und seinen Nebengesetzen geregelt."}, 
+        {"acr":"vRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"},
+        {"acr":"wRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"},
+        {"acr":"hRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"},
+        {"acr":"mRecht", "text":"Das Strafrecht, auch als Kriminal(straf)recht bezeichnet, umfasst im Rechtssystem eines Landes diejenigen Rechtsnormen, durch die bestimmte Verhaltensweisen verboten und mit einer Strafe als Rechtsfolge verknüpft werden. Als Ziel des Strafrechts gilt vor allem der Schutz bestimmter Rechtsgüter wie beispielsweise Leben, Gesundheit und Eigentum von Personen, Sicherheit und Integrität des Staates sowie elementarer Werte des Gemeinschaftslebens. Mögliche Strafen, die jedoch nicht in allen Ländern praktiziert werden, sind unter anderem die Geldstrafe, die Freiheitsstrafe, die Körperstrafe sowie als schwerwiegendste Form die Todesstrafe."},
+        {"acr":"bRecht", "text":"Das Strafrecht, auch als Kriminal(straf)recht bezeichnet, umfasst im Rechtssystem eines Landes diejenigen Rechtsnormen, durch die bestimmte Verhaltensweisen verboten und mit einer Strafe als Rechtsfolge verknüpft werden. Als Ziel des Strafrechts gilt vor allem der Schutz bestimmter Rechtsgüter wie beispielsweise Leben, Gesundheit und Eigentum von Personen, Sicherheit und Integrität des Staates sowie elementarer Werte des Gemeinschaftslebens. Mögliche Strafen, die jedoch nicht in allen Ländern praktiziert werden, sind unter anderem die Geldstrafe, die Freiheitsstrafe, die Körperstrafe sowie als schwerwiegendste Form die Todesstrafe."},
+        {"acr":"iRecht", "text":"Das Strafrecht, auch als Kriminal(straf)recht bezeichnet, umfasst im Rechtssystem eines Landes diejenigen Rechtsnormen, durch die bestimmte Verhaltensweisen verboten und mit einer Strafe als Rechtsfolge verknüpft werden. Als Ziel des Strafrechts gilt vor allem der Schutz bestimmter Rechtsgüter wie beispielsweise Leben, Gesundheit und Eigentum von Personen, Sicherheit und Integrität des Staates sowie elementarer Werte des Gemeinschaftslebens. Mögliche Strafen, die jedoch nicht in allen Ländern praktiziert werden, sind unter anderem die Geldstrafe, die Freiheitsstrafe, die Körperstrafe sowie als schwerwiegendste Form die Todesstrafe."}
     ],
     "contactDetails":[
         {"acr":"name", "text":"Rechtsanwaltskanzlei Michaela Duve"},

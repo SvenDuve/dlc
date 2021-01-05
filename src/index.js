@@ -50,13 +50,15 @@ function contentOnMouseEnter() {
                 }
             }, 50);
             target.style.background = '#D8C3A5';
-            target.style.color = '#8E8D8A'
+            // target.style.color = '#8E8D8A'
+            target.style.color = 'black'
         };
 
         document.getElementById(list[i].acr).onmouseleave = function(event) {
             let target = event.target;
             let c = target.childNodes[1];    
             c.remove();
+            target.style.color = '#8E8D8A'
             target.style.background = '';
         };
         
