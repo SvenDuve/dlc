@@ -1,100 +1,30 @@
 import _ from 'lodash'
-import './style.scss'
+// import './styles/style.scss'
 import img from './books-768426_1920.jpg'
 import compList from './comp.json'
 import simpleParallax from 'simple-parallax-js';
-
-// import './compFields.js';
-
-// console.log(compList.activityFields)
-
-
-function menuComponent(listOfItems, type) {
-
-    let name = 'menu '
-
-    const menu = document.createElement('div');
-    menu.className = name.concat(type);
-
-    for (var item of listOfItems) {
-        console.log(item.acr);
-        console.log(item.text);
-        let menuItem = document.createElement('div');
-        menuItem.className = menu.className.concat('item');
-        menuItem.id = item.acr
-        menuItem.innerHTML = item.text;
-        menu.appendChild(menuItem);
-        // item.innerHTML = element;
-        // menu.appendChild(item)
-    };
-
-    return menu;
-
-};
-
-const menuList = document.getElementById('menu');
-menuList.appendChild(menuComponent(compList.menuItem, 'main'));
-
-function createList(listOfItems, type) {
-    let name = 'list'
-
-    const list = document.createElement('div')
-    list.className = name.concat(type) 
-
-    // listOfItems.forEach(el => console.log(el))
+import { menuComponent } from './js/navigation';
+import { createList } from './js/content';
+import { contentComponents } from './js/content';
 
 
-    for (var item of listOfItems) {
-        console.log(item.acr)
-        console.log(item.text)
-        var listItem = document.createElement('div');
-        listItem.className = list.className.concat(' items textForm');
-        listItem.id = item.acr;
-        listItem.innerHTML = item.text;
-        list.appendChild(listItem);
-    };
 
-    return list;
-
-}
-
-
-const competenceList = document.getElementById('competenceList');
-competenceList.appendChild(createList(compList.activityFields, 'competence'));
-
-
-// menuComponent()
-
-// document.body.appendChild(menuComponent());
 
 function addPicture() {
-    const myImg = new Image(1500, 1200);
+    const myImg = new Image(1200, 700);
 
     myImg.src = img;
     myImg.className = 'image';
+
 
     document.getElementsByClassName('contentGreeting')[0].appendChild(myImg);
 
     const image = document.getElementsByClassName('image');
     new simpleParallax(image, {
-        orientation: "right"
+        orientation: "up"
     });
 
-}
-
-addPicture();
-
-
-function contentComponents() {
-
-    const contentComponent = document.createElement('div');
-    contentComponent.className = 'content';
-
-    return contentComponent;
-
-}
-
-// document.body.appendChild(contentComponents())
+};
 
 
 
@@ -136,12 +66,6 @@ function contentOnMouseEnter() {
 }
 
 
-contentOnMouseEnter();
-
-
-
-const Sections = document.getElementsByClassName('contentBox');
-// console.log(Sections);
 
 
 function getSectionIds(Sections) {
@@ -163,13 +87,10 @@ function getButtonId(Ids) {
     for (let i = 0; i < Ids.length; i++) {
         buttonIds.push(Ids[i].acr); 
     }
-            
+    
     return buttonIds
 };
 
-console.log(compList.menuItem.length)
-
-console.log(getSectionIds(Sections));
 
 
 
@@ -189,11 +110,6 @@ function scrollThereNow() {
 }
 
 
-const buttonIds = getButtonId(compList.menuItem);
-const Ids = getSectionIds(Sections);
-
-scrollThereNow();
-
 function backUp() {
     let homeDude = document.getElementById("compName");
     let loc = document.getElementById("startImg");
@@ -202,38 +118,53 @@ function backUp() {
     })
 }
 
-backUp();
 
+        
+        
+        
+const checkpoint = 500;
+        
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+    let opacity = 1
+    if (currentScroll <= checkpoint) {
+        opacity = 1 - currentScroll / checkpoint;
+    } else {
+        opacity = 0;
+    }
+    document.querySelector(".contentGreeting").style.opacity = opacity;
+});
+        
 
-// function goHome() {
-    
-//     let homeButton = document.getElementById('compName');
-//     // let targetLoc = document.getElementById(Ids[i]);
-//     homeButton.addEventListener('click', function() {
-
-//         window.location.href = "/";
-//         // targetLoc.scrollIntoView({behavior: 'smooth'});
-            
-//     });
-    
+// function fadeInHeadline() {
+//     let imageElement = getElementsByClassName('contentGreeting')[1];
+//     imageElement.
 // }
 
 
-// goHome();
+
+
+
+const menuList = document.getElementById('menu');
+menuList.appendChild(menuComponent(compList.menuItem, 'main'));
+
+
+
+const competenceList = document.getElementById('competenceList');
+competenceList.appendChild(createList(compList.activityFields, 'competence'));
 
 
 
 
-const checkpoint = 500;
+addPicture();
+contentOnMouseEnter();
 
-window.addEventListener("scroll", () => {
-   const currentScroll = window.pageYOffset;
-   let opacity = 1
-   if (currentScroll <= checkpoint) {
-     opacity = 1 - currentScroll / checkpoint;
-   } else {
-     opacity = 0;
-   }
-   document.querySelector(".contentGreeting").style.opacity = opacity;
-});
 
+
+
+const Sections = document.getElementsByClassName('contentBox');
+const buttonIds = getButtonId(compList.menuItem);
+const Ids = getSectionIds(Sections);
+
+scrollThereNow();
+backUp();

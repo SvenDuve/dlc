@@ -1,29 +1,62 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: {
+        app: './src/index.js',
+        basic: './src/js/basic.js'
+    },
     devtool: 'inline-source-map',
     devServer: {
         contentBase: './dist'
     },
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].bundle.js'
     },
     module: {
         rules: [
             {
                 test: /\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
                     'file-loader'
                 ]
+            },
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env"]
+                    }
+                }
             }
         ]
-    }
+    },
+    plugins: [
+        new MiniCssExtractPlugin(),
+        new CleanWebpackPlugin,
+        new HtmlWebpackPlugin({
+            template: "./src/views/index.html",
+            filename: "./index.html"
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/views/impressum.html",
+            filename: "./impressum.html",
+            chunks: ['basic']
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/views/datenschutz.html",
+            filename: "./datenschutz.html",
+            chunks: ['basic']
+        })
+    ]
 };

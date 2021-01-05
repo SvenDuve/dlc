@@ -20,5 +20,13 @@
         {"acr":"gRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"},
         {"acr":"mRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"},
         {"acr":"sRecht", "text":"Das Strafrecht, auch als Kriminal(straf)recht bezeichnet, umfasst im Rechtssystem eines Landes diejenigen Rechtsnormen, durch die bestimmte Verhaltensweisen verboten und mit einer Strafe als Rechtsfolge verknüpft werden. Als Ziel des Strafrechts gilt vor allem der Schutz bestimmter Rechtsgüter wie beispielsweise Leben, Gesundheit und Eigentum von Personen, Sicherheit und Integrität des Staates sowie elementarer Werte des Gemeinschaftslebens. Mögliche Strafen, die jedoch nicht in allen Ländern praktiziert werden, sind unter anderem die Geldstrafe, die Freiheitsstrafe, die Körperstrafe sowie als schwerwiegendste Form die Todesstrafe."}
+    ],
+    "contactDetails":[
+        {"acr":"name", "text":"Rechtsanwaltskanzlei Michaela Duve"},
+        {"acr":"adresse", "text":"Bahnhofstraße 6"},
+        {"acr":"place", "text":"91126 Schwabach"},
+        {"acr":"mobile", "text":"+491601234567"},
+        {"acr":"fon", "text":"+499122123123"},
+        {"acr":"mail", "text":"info@ra-duve.de"}
     ]
 }
