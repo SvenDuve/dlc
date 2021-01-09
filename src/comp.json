@@ -16,7 +16,7 @@
         {"acr":"kontaktBtn", "text":"Kontakt"}
     ],
     "activityDescriptions":[
-        {"acr":"kRecht", "text":"Das Wirtschaftsrecht ist die Gesamtheit aller privatrechtlichen, strafrechtlichen und öffentlich-rechtlichen Rechtsnormen und Maßnahmen, mit denen der Staat auf die Rechtsbeziehungen der am Wirtschaftsleben Beteiligten untereinander und im Verhältnis zum Staat einwirkt, und ist der Oberbegriff für das Recht des Wirtschaftsverkehrs sowie die rechtliche Grundlage der Wirtschaftspolitik."}, 
+        {"acr":"kRecht", "text":"Kauf- und Werkverträge, zwei Verträge, die jeder regelmäßig im täglichen Leben abschließt, oft vollkommen unbewusst und ohne die Einzelheiten schriftlich zu fixieren, z.B. beim Einkauf beim Bäcker oder Baumarkt um die Ecke oder der Beauftragung eines Klemptners, der eine Verstopfung beseitigen soll.  Zum Glück werden viele dieser Verträge unproblematisch erfüllt, so dass eine Betrachtung der juristischen Einzelheiten dieser Vertragsarten nicht erforderlich ist.<br><br>Was jedoch, wenn es zum Streit kommt, größere bzw. hochwertige Waren angeschafft werden sollen oder Waren regelmäßig bezogen werden sollen? In diesem Fall kommt es auf die juristischen Details an, für die wir Ihnen mit unserer Erfahrung beratend zur Seite stehen, um Ihnen zu Ihrem Recht zu verhelfen.<br><br>Wir besprechen mit Ihnen Ihre Wünsche und Anforderungen und formulieren Vertragsbedingungen entsprechend. Nach unserer Erfahrung helfen klare Vertragsbedingungen und Verpflichtungen nachträglichen Streit oder gar Klagen zu vermeiden."}, 
         {"acr":"eRecht", "text":"Das Handelsrecht ist ein Teilgebiet des Zivilrechts, das sich mit dem Recht der Kaufleute beschäftigt. In der Europäischen Union ist das Handelsrecht in großen Teilen durch Richtlinien harmonisiert. In Deutschland ist das Handelsrecht im Handelsgesetzbuch und seinen Nebengesetzen geregelt."}, 
         {"acr":"vRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"},
         {"acr":"wRecht", "text":"Some text here, should be a bit longer as it is a description of what we really do I hope its interesting"},
@@ -29,8 +29,19 @@
         {"acr":"name", "text":"Rechtsanwaltskanzlei Michaela Duve"},
         {"acr":"adresse", "text":"Bahnhofstraße 6"},
         {"acr":"place", "text":"91126 Schwabach"},
-        {"acr":"mobile", "text":"+491601234567"},
         {"acr":"fon", "text":"+499122123123"},
         {"acr":"mail", "text":"info@ra-duve.de"}
+    ],
+    "Directions":[
+        {"acr":"walk", "text":"Zu Fuss oder mit dem Rad erreichen sie uns am Besten, wenn Sie sich am Stadtpark Schwabach orientieren."},
+        {"acr":"bus", "text":"Direkt vor der Eingangstüre in Richtung Bahnhof halten die Linien ..."},
+        {"acr":"train", "text":"Der Bahnhof Schwabach ist cirka 5 Minuten Fussweg von unserer Kanzlei entfernt, Sie kommen dort mit den S-Bahn Linien S--- oder der Regionalbahn an."},
+        {"acr":"car", "text":"Aus der Innenstadt kommend orientieren Sie sich am Bahnhof, vor dem Anwesen und direkt am Stadtpark sind Parkplätze vorhanden."}
+    ],
+    "Transport":[
+        {"acr":"walk", "text":"Zu Fuss"},
+        {"acr":"bus", "text":"Mit dem Bus"},
+        {"acr":"train", "text":"Mit dem Zug"},
+        {"acr":"car", "text":"Mit dem Auto"}
     ]
 }

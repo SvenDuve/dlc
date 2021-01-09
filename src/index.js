@@ -1,10 +1,13 @@
-import _ from 'lodash'
+import _ from 'lodash';
 // import './styles/style.scss'
-import img from './books-768426_1920.jpg'
-import compList from './comp.json'
+import img from './books-768426_1920.jpg';
+import img2 from './finanzamt.jpg';
+import compList from './comp.json';
 import simpleParallax from 'simple-parallax-js';
 import { menuComponent } from './js/navigation';
 import { createList } from './js/content';
+import { createAdress } from './js/content';
+import { contentOnMouseEnter } from './js/content';
 import { contentComponents } from './js/content';
 
 
@@ -28,44 +31,44 @@ function addPicture() {
 
 
 
-function contentOnMouseEnter() {
+// function contentOnMouseEnter(compList) {
 
-    const list = compList.activityDescriptions;
+//     const list = compList.activityDescriptions;
     
-    for(let i = 0; i < list.length; i++){
+//     for(let i = 0; i < list.length; i++){
         
-        document.getElementById(list[i].acr).onmouseenter = function(event) {
-            let target = event.target;
-            const desc = document.createElement('div');
-            desc.style.opacity = 0;
-            desc.innerHTML = list[i].text;
-            target.appendChild(desc)
-            let steps = 0;
-            let timer = setInterval(function() {
-                steps++;
-                desc.style.opacity = 0.05 * steps;
-                if(steps >= 20) {
-                    clearInterval(timer);
-                    timer = undefined;
-                }
-            }, 50);
-            target.style.background = '#D8C3A5';
-            // target.style.color = '#8E8D8A'
-            target.style.color = 'black'
-        };
+//         document.getElementById(list[i].acr).onmouseenter = function(event) {
+//             let target = event.target;
+//             const desc = document.createElement('div');
+//             desc.style.opacity = 0;
+//             desc.innerHTML = list[i].text;
+//             target.appendChild(desc)
+//             let steps = 0;
+//             let timer = setInterval(function() {
+//                 steps++;
+//                 desc.style.opacity = 0.05 * steps;
+//                 if(steps >= 20) {
+//                     clearInterval(timer);
+//                     timer = undefined;
+//                 }
+//             }, 50);
+//             target.style.background = '#D8C3A5';
+//             // target.style.color = '#8E8D8A'
+//             target.style.color = 'black'
+//         };
 
-        document.getElementById(list[i].acr).onmouseleave = function(event) {
-            let target = event.target;
-            let c = target.childNodes[1];    
-            c.remove();
-            target.style.color = '#8E8D8A'
-            target.style.background = '';
-        };
+//         document.getElementById(list[i].acr).onmouseleave = function(event) {
+//             let target = event.target;
+//             let c = target.childNodes[1];    
+//             c.remove();
+//             target.style.color = '#8E8D8A'
+//             target.style.background = '';
+//         };
         
         
-    };
+//     };
 
-}
+// }
 
 
 
@@ -147,6 +150,19 @@ window.addEventListener("scroll", () => {
 
 
 
+function smallImage(img) {
+    const myImg = new Image(300, 300);
+
+    myImg.src = img;
+    myImg.className = 'image';
+
+    return myImg;
+    // document.getElementsByClassName('contactImageBox').appendChild(myImg);
+
+}
+
+
+
 const menuList = document.getElementById('menu');
 menuList.appendChild(menuComponent(compList.menuItem, 'main'));
 
@@ -159,14 +175,38 @@ competenceList.appendChild(createList(compList.activityFields, 'competence'));
 
 
 addPicture();
-contentOnMouseEnter();
-
-
+contentOnMouseEnter(compList.activityDescriptions);
 
 
 const Sections = document.getElementsByClassName('contentBox');
 const buttonIds = getButtonId(compList.menuItem);
 const Ids = getSectionIds(Sections);
+createAdress(compList);
+
+
+
+
+
+
+
+const directionsList = document.createElement('div');
+directionsList.className = 'directionsList';
+directionsList.appendChild(createList(compList.Transport, 'transport'));
+
+// directionsList.innerHTML = "Hallo";
+const contacts = document.getElementById('contactContentText');
+contacts.appendChild(directionsList);
+contentOnMouseEnter(compList.Directions);
+
+
+const contactImages = document.getElementById('contactImageBox');
+contactImages.appendChild(smallImage(img2));
+
+const map = document.createElement('div');
+map.id = 'map';
+map.innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2600.3212072786655!2d11.02642791565461!3d49.32713727554087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f4fd80c3d932f%3A0x5faa8d958a7d905e!2sBahnhofstra%C3%9Fe%206%2C%2091126%20Schwabach!5e0!3m2!1sde!2sde!4v1610174528732!5m2!1sde!2sde" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
+contactImages.appendChild(map)
+
 
 scrollThereNow();
 backUp();
