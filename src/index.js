@@ -200,11 +200,13 @@ contentOnMouseEnter(compList.Directions);
 
 
 const contactImages = document.getElementById('contactImageBox');
-contactImages.appendChild(smallImage(img2));
+// contactImages.appendChild(smallImage(img2));
 
 const map = document.createElement('div');
 map.id = 'map';
-map.innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2600.3212072786655!2d11.02642791565461!3d49.32713727554087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f4fd80c3d932f%3A0x5faa8d958a7d905e!2sBahnhofstra%C3%9Fe%206%2C%2091126%20Schwabach!5e0!3m2!1sde!2sde!4v1610174528732!5m2!1sde!2sde" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
+map.style.paddingTop = "100px"
+map.style.alignSelf = "center"
+map.innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2600.3212072786655!2d11.02642791565461!3d49.32713727554087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f4fd80c3d932f%3A0x5faa8d958a7d905e!2sBahnhofstra%C3%9Fe%206%2C%2091126%20Schwabach!5e0!3m2!1sde!2sde!4v1610174528732!5m2!1sde!2sde" width="400" height="300" frameborder="10" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
 contactImages.appendChild(map)
 
 
