@@ -27,7 +27,7 @@
         {"acr":"adresse", "text":"Bahnhofstraße 6"},
         {"acr":"place", "text":"91126 Schwabach"},
         {"acr":"fon", "text":"+49-9122-8855730"},
-        {"acr":"mail", "text":"info@ra-duve.de"}
+        {"acr":"mail", "text":"<a href=\"mailto:info@ra-duve.de\">info@ra-duve.de</a>"}
     ],
     "Directions":[
         {"acr":"walk", "text":"Zu Fuss oder mit dem Rad erreichen sie uns am Besten, wenn Sie sich am Stadtpark Schwabach orientieren."},
