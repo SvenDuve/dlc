@@ -9,6 +9,23 @@ $headsize: 35px;
 $paSize: 20px;
 
 
+.fixed-bottom {
+  width: auto;
+  position: sticky;
+  bottom: 30px;
+  padding: 22px;
+}
+
+.toast-body {
+  background-color: $dark-red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: $quicksan;
+  padding: 20px;
+}
+
 
 
 .headings {
@@ -189,7 +206,7 @@ body {
 .footer--item {
   font-family: $raleway;
   font-size: small;
-  padding: 3px;
+  padding: 15px;
 }
 
 
@@ -369,7 +386,8 @@ body {
     grid-template-columns: 100%;
     // border: 1px solid black;
     background-color: $dark-red;
-    position: relative;
+    bottom: 0;
+    position: sticky;
     width: 100%;
 
   }
@@ -385,7 +403,7 @@ body {
   .footer--item {
     font-family: $raleway;
     font-size: small;
-    padding: 3px;
+    padding: 1px;
   }
   
   

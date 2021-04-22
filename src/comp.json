@@ -31,7 +31,7 @@
     ],
     "Directions":[
         {"acr":"walk", "text":"Zu Fuss oder mit dem Rad erreichen sie uns am Besten, wenn Sie sich am Stadtpark Schwabach orientieren."},
-        {"acr":"bus", "text":"Direkt vor der Eingangstüre in Richtung Bahnhof halten die Linien ..."},
+        {"acr":"bus", "text":"Direkt vor der Eingangstüre in Richtung Bahnhof halten die Linien 676, 677, 679, 673"},
         {"acr":"train", "text":"Der Bahnhof Schwabach ist cirka 5 Minuten Fussweg von unserer Kanzlei entfernt, sie kommen dort mit der S-Bahn Linie S2 aus verschiednen Richtungen an."},
         {"acr":"car", "text":"Orientieren Sie sich am Stadtpark Schwabach, vor dem Anwesen und direkt am Stadtpark sind Parkplätze vorhanden."}
     ],

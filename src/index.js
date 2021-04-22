@@ -5,10 +5,11 @@ import img2 from './finanzamt.jpg';
 import compList from './comp.json';
 import simpleParallax from 'simple-parallax-js';
 import { menuComponent } from './js/navigation';
-import { createList } from './js/content';
+import { contentOnTouch, createList } from './js/content';
 import { createAdress } from './js/content';
 import { contentOnMouseEnter } from './js/content';
 import { contentComponents } from './js/content';
+import 'jquery';
 
 
 
@@ -176,6 +177,7 @@ competenceList.appendChild(createList(compList.activityFields, 'competence'));
 
 addPicture();
 contentOnMouseEnter(compList.activityDescriptions);
+// contentOnTouch(compList.activityDescriptions);
 
 
 const Sections = document.getElementsByClassName('contentBox');
@@ -199,6 +201,7 @@ contacts.appendChild(directionsList);
 contentOnMouseEnter(compList.Directions);
 
 
+
 const contactImages = document.getElementById('contactImageBox');
 // contactImages.appendChild(smallImage(img2));
 
@@ -212,3 +215,74 @@ contactImages.appendChild(map)
 
 scrollThereNow();
 backUp();
+
+// this works
+
+// $(document).ready(function(){
+//     $("#compName").click(function(){
+//       $(this).hide();
+//     });
+//   });
+
+
+
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    console.log(document.cookie)
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie(name) {   
+    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+function cookieConsent() {
+    if (getCookie('allowCookies') == 1) {
+        $('.toast').hide()
+    }
+}
+
+
+$('#btnDeny').click(()=>{
+    eraseCookie('allowCookies')
+    $('.toast').hide()
+})
+
+
+$('#btnAccept').click(()=>{
+    setCookie('allowCookies','1',7)
+    $('.toast').hide()
+})
+
+$('#btnInf').click(()=>{
+    
+    var url = "datenschutz.html";
+    $(location).attr('href',url);
+    
+})
+
+// load
+cookieConsent();
+
+
+// for demo / testing only
+// $('#btnReset').click(()=>{
+//     // clear cookie to show toast after acceptance
+//     eraseCookie('allowCookies')
+//     $('.toast').toast('show')
+// })

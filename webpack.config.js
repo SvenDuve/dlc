@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack')
 
 module.exports = {
     mode: 'development',
@@ -24,6 +25,11 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: ['babel-loader'],
+            },
+            {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
                     'file-loader'
@@ -41,6 +47,9 @@ module.exports = {
             }
         ]
     },
+    resolve: {
+        extensions: ['*', '.js', '.jsx'],
+    },
     plugins: [
         new MiniCssExtractPlugin(),
         new CleanWebpackPlugin,
@@ -57,6 +66,10 @@ module.exports = {
             template: "./src/views/datenschutz.html",
             filename: "./datenschutz.html",
             chunks: ['basic']
-        })
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+          })
     ]
 };

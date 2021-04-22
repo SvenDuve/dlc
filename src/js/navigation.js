@@ -6,8 +6,6 @@ function menuComponent(listOfItems, type) {
     menu.className = name.concat(type);
 
     for (var item of listOfItems) {
-        console.log(item.acr);
-        console.log(item.text);
         let menuItem = document.createElement('div');
         menuItem.className = menu.className.concat('item');
         menuItem.id = item.acr
